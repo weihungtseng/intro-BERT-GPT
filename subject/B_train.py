@@ -243,7 +243,7 @@ for preN in [50, 100, 300, 666, 1331, 3328, 6655]:
     ### Model Definition
     model = MultiLabelClassificationModel(
         #'bert', 'bert-base-chinese', ## (model class, checkpoints=='model weights')
-        f'{modelClass}', f'{modelName}', ## run at ai2 gpu1
+        f'{modelClass}', f'{modelName}', 
         num_labels = int(dataSet[3:]), ## 0~29
         args = {## learning rate(學習率) ## 更新幅度
             'reprocess_input_data': True, 
