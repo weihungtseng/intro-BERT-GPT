@@ -2,7 +2,7 @@
 ### Tag: [K-Fold Cross Validation] [Tweets]
 ### Author: Wei-Hung, Tseng
 ### CreateDate: 2023/02/06
-### SSH: ssh -p 22222 andy@ai2.glis.ntnu.edu.tw
+### SSH: 
 ### Conda env: mentalTweet
 ### Install:
 '''

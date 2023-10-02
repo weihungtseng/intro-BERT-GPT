@@ -21,27 +21,7 @@
 
 ### Record:
 '''
-    Twitter Account: @weihungtseng
-    Platform: Twitter Developer Protal -> Projects&Apps -> TwitterCrawler -> hashtag_crawler20200428
-    API Key: sHc0X98XAkDastG8td2hzE9Xr
-    API Key Secret: qiIkNZ0iB4m8i1bY6HkTa0qd5nn8fdfPJu2cWHbPPOaSGFaBoh
-    Bearer Token: AAAAAAAAAAAAAAAAAAAAACbubwEAAAAAx%2Bw9JCStzQB72k5fgvIETWJjpXU%3DcgUPpc2MR4qtw19M7n6Ud4pfJ7eioKRzLPwoXlwY9yIblxQ6yX
-    Access Token: 1519568124190031873-c1CNsrMy4rKGCUmrQCsQrxjqdsECxm
-    Access Token Secret: FR2Sox4FmTvgerd8GOOiyY11wUYeaxFKaHXa0O58BZJeL
-    Use tweet id to find tweet:
-        https://twitter.com/account/status/id
-        ex:
-            https://twitter.com/weihungtseng/status/1520884242917597185
-
-    Academic Research Account:
-        TWITTER 帳號 lienlabv2
-        密碼: lienmhllab
-
-        2022-12-23
-        API Key: 8OSh2sEjvtRfkX1jG9ESzaE8J
-        API Key Secret: 3Vc2CqGggV1KRlf57GAupc7IjRfKfc7AdzWXST0fnWms0V9Eil
-        Bearer Token: AAAAAAAAAAAAAAAAAAAAAArtkgEAAAAA3r83qmzwNoROSROAp%2B4BvDvWzfM%3DcmqJkUAzIL956stGMv8ZclRirCLPF3G6uVMLr3v7dN6kBH0YpT
-        {"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAAArtkgEAAAAA3r83qmzwNoROSROAp%2B4BvDvWzfM%3DcmqJkUAzIL956stGMv8ZclRirCLPF3G6uVMLr3v7dN6kBH0YpT"}%   
+    
 '''
 
 ### Refernce:
@@ -95,8 +75,7 @@ import json
 from tqdm import tqdm
 
 ### Global variable
-## BAD ERR: bearer_token = os.environ.get("AAAAAAAAAAAAAAAAAAAAAArtkgEAAAAA3r83qmzwNoROSROAp%2B4BvDvWzfM%3DcmqJkUAzIL956stGMv8ZclRirCLPF3G6uVMLr3v7dN6kBH0YpT")
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAArtkgEAAAAA3r83qmzwNoROSROAp%2B4BvDvWzfM%3DcmqJkUAzIL956stGMv8ZclRirCLPF3G6uVMLr3v7dN6kBH0YpT"
+bearer_token = ""
 end_date = str(datetime.now()).split()[0]
 # print(end_date); exit()
 ## Academic research search all endpoint URL

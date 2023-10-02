@@ -2,7 +2,7 @@
 ### Tag: [GPT3] [Train] [Tweets]
 ### Author: Wei-Hung, Tseng
 ### CreateDate: 2023/02/10
-### SSH: ssh -p 22222 andy@ai2.glis.ntnu.edu.tw
+### SSH: 
 ### Conda env: mentalTweet
 ### Install:
 '''
@@ -151,9 +151,6 @@ def create_train_test_data():
     openai tools fine_tunes.prepare_data -f ./B3_data/HA2_train_08.jsonl -q
     openai tools fine_tunes.prepare_data -f ./B3_data/HE1_train_08.jsonl -q
     openai tools fine_tunes.prepare_data -f ./B3_data/HE2_train_08.jsonl -q
-
-    dynamic:
-        openai tools fine_tunes.prepare_data -f ./B3_data/source/20230317/HE2_train_08.jsonl -q
 '''
 
 ## Now we can start the training process and from this point an OpenAI api key is required.
@@ -162,69 +159,11 @@ def create_train_test_data():
     openai api fine_tunes.create -t test.jsonl -m ada --suffix "custom model name"
 
     M1: 
-        openai --api-key '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' api fine_tunes.create \
+        openai --api-key '' api fine_tunes.create \
         -t "./B3_data/M1_train_08_prepared_train.jsonl" -v "./B3_data/M1_train_08_prepared_valid.jsonl" \
         -m ada --suffix "M1" --compute_classification_metrics --classification_n_classes 5
-
-    M5: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/M5_train_08_prepared_train.jsonl" -v "./B3_data/M5_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "M5" --compute_classification_metrics --classification_n_classes 5
-
-    M10: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/M10_train_08_prepared_train.jsonl" -v "./B3_data/M10_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "M10" --compute_classification_metrics --classification_n_classes 5
-
-    R1: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/R1_train_08_prepared_train.jsonl" -v "./B3_data/R1_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "R1" --compute_classification_metrics --classification_n_classes 5
     
-    R2: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/R2_train_08_prepared_train.jsonl" -v "./B3_data/R2_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "R2" --compute_classification_metrics --classification_n_classes 5
-    
-    S1: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/S1_train_08_prepared_train.jsonl" -v "./B3_data/S1_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "S1" --compute_classification_metrics --classification_n_classes 5
-    
-    S2: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/S2_train_08_prepared_train.jsonl" -v "./B3_data/S2_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "S2" --compute_classification_metrics --classification_n_classes 5
-    
-    HA1: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/HA1_train_08_prepared_train.jsonl" -v "./B3_data/HA1_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "HA1" --compute_classification_metrics --classification_n_classes 5
-    
-    HA2: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/HA2_train_08_prepared_train.jsonl" -v "./B3_data/HA2_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "HA2" --compute_classification_metrics --classification_n_classes 5
-    
-    HE1: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/HE1_train_08_prepared_train.jsonl" -v "./B3_data/HE1_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "HE1" --compute_classification_metrics --classification_n_classes 5
-    
-    HE2: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/HE2_train_08_prepared_train.jsonl" -v "./B3_data/HE2_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "HE2" --compute_classification_metrics --classification_n_classes 5
-    
-    dynamic: 
-        openai --api-key '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' api fine_tunes.create \
-        -t "./B3_data/source/20230317/HE2_train_08_prepared_train.jsonl" \
-        -v "./B3_data/source/20230317/HE2_train_08_prepared_valid.jsonl" \
-        -m ada --suffix "HE2" --compute_classification_metrics --classification_n_classes 5
-
-        (mentalTweet) andy@server:/nfs/andy/mental$ 
-        
-        openai --api-key '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' api fine_tunes.follow -i \
+        openai --api-key '' api fine_tunes.follow -i \
         ft-7HPYfPtywqToeRp4QxT6hSt0
         
         [2023-02-17 21:29:25] Created fine-tune: ft-YwHESpCf7yNNNzgt7WuPLtrJ
@@ -251,7 +190,7 @@ def create_train_test_data():
 # create_train_test_data(); exit()
 
 ## api_key create at 2023年2月17日
-openai.api_key = "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"
+openai.api_key = ""
 ## ft_model: In output of the training process
 ## 20230306 8:2 model
 # ft_model = 'ada:ft-personal:m1-2023-03-02-03-27-44'

@@ -3,20 +3,7 @@ import openai
 import os
 from pprint import pprint
 
-# 设置 API 密钥
-## Step 1
-# $ export OPENAI_API_KEY=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
-## Step 2
-# $ python test_ChatGPT.py
-
-## Method 1
-# $ export OPENAI_API_KEY=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
-# openai.api_key = os.environ["OPENAI_API_KEY"]
-
-## Method 2
-openai.api_key = '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'
-# openai.api_key = os.environ["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"] (wrong)
-
+openai.api_key = ''
 
 # # 使用 GPT-3 模型生成文本
 # model_engine = "text-davinci-002"
