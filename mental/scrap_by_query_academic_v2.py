@@ -329,19 +329,6 @@ for key in queryDict:
         ## Academic research: 100 requests per 15 minutes
         if request_cnt == 100: print('sleeping'); time.sleep(900); request_cnt = 0
 
-        '''
-        fail at user_req_cnt = 371
-          File "/Users/andy/Documents/project/Web_crawler/twitter/_MentalTweets/A2_scrap_by_query/scrap_by_query_academic_v2.py", line 342, in <module>
-            request_cnt += 1; user_req_cnt += 1
-        IndexError: list index out of range
-
-        fail at user_req_cnt = 40
-        File "/Users/andy/Documents/project/Web_crawler/twitter/_MentalTweets/A2_scrap_by_query/scrap_by_query_academic_v2.py", line 356, in <module>
-            data_dict[author_id]['username'] = user_res_json['data'][idx]['username']
-        IndexError: list index out of range
-
-        Could not find user with ids: [1093935502082871298].
-        '''
         try:
             user_res_json = user_connect_to_endpoint(create_url(TwitterNameOrID))
         except Exception as e: ## if wrong
