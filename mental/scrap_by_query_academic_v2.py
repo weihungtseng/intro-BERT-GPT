@@ -347,11 +347,9 @@ for key in queryDict:
     for ind, row in df.iterrows():
         author_id_str = str(row['author_id'])
         if data_dict[author_id_str]['username'] == '': continue
-        # new_df.loc[len(new_df)] = [data_dict[author_id_str]['username'], data_dict[author_id_str]['account_created_at'], int(data_dict[author_id_str]['account_total_tweet']), row['text'], row['tweet_created_at'], row['tweet_id']]
         lst.append([data_dict[author_id_str]['username'], data_dict[author_id_str]['account_created_at'], int(data_dict[author_id_str]['account_total_tweet']), row['text'], row['tweet_created_at'], row['tweet_id']])
         progress.update(10)
 
-    # new_df = new_df.sort_values(by=['account_total_tweet'], ascending=False)
     df = pandas.DataFrame(lst, columns=["username", "account_created_at", "account_total_tweet", "text", "tweet_created_at", "tweet_id"])
     df.to_csv(f'./{data_date}/{key}.csv', index = False)
     print(f'{key} time = {(time.time()-loopTime):.2f}')
