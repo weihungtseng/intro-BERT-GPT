@@ -1,17 +1,3 @@
-### Topic: Web Crawler by Twitter API Academic V2 - Scrap by Query
-### Tag: [Twitter] [Crawler] [API]
-### Author: Wei-Hung, Tseng
-### CreateDate: 2022/12/15
-### Describe: 
-'''
-    we will download target tweets with the 3 main fields: "user_id, date, tweet_content". 
-    These 3 main fields will be processed into 9 fields: "user_id, period_1, period_2, period_3, 
-    M, R, S, HE, HA", where period_i (i=1, 2, 3) is from date, and M, R, S, HE, HA is our 
-    mental status categories, predicted from tweet_content using some deep learning methods. 
-    With these 9 fields, we will then run SPSS to see the significance of the status transition 
-    among those 3 periods.
-'''
-
 ### Install: none
 
 ### Execute:

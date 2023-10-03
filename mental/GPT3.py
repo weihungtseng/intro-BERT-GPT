@@ -1,9 +1,3 @@
-### Topic: Mental Tweet Train by GPT3
-### Tag: [GPT3] [Train] [Tweets]
-### Author: Wei-Hung, Tseng
-### CreateDate: 2023/02/10
-### SSH: 
-### Conda env: mentalTweet
 ### Install:
 '''
     pip install transformers simpletransformers emoji==0.6.0 openpyxl

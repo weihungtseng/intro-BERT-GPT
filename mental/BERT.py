@@ -1,9 +1,3 @@
-### Topic: Mental Tweet k-Fold Cross Validation V2
-### Tag: [K-Fold Cross Validation] [Tweets]
-### Author: Wei-Hung, Tseng
-### CreateDate: 2023/02/06
-### SSH: 
-### Conda env: mentalTweet
 ### Install:
 '''
     pip install transformers simpletransformers emoji==0.6.0 openpyxl torch
@@ -151,8 +145,7 @@ df = pandas.DataFrame(lst, columns = (["tweet"] + cols))
 del lst; del M_df; del R_df; del S_df; del HA_df; del HE_df; del zero_df
 print(df.head()); print()
 
-# for col in cols:
-for col in ['R2', 'HE2']:
+for col in cols:
     df1 = df[['tweet', col]]
     df1.rename(columns = {'tweet':'text', f'{col}':'labels'}, inplace = True)
 
