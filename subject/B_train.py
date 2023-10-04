@@ -1,9 +1,3 @@
-# Topic: NTNU 1-1 Final - Train
-# Tag: [Train] [NTNU Library Data]
-# Author: Wei-Hung, Tseng
-# CreateDate: 2022/11/25
-# SSH: 
-# Conda env: include in [mentalTweet]
 # Install: 
 #   pip install transformers simpletransformers emoji==0.6.0 openpyxl tabulate
 
