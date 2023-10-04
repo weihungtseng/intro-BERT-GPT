@@ -392,7 +392,7 @@ if __name__ == "__main__":
         (1,0),(5,0),(10,0),(20,0),(30,0),(40,0),(50,0),(100,0)
     ]
     for col in cols:
-        sourcePath = f'../../data/test_ChatGPT/data/standard/{col}_standard.csv'
+        # sourcePath = f'../../data/test_ChatGPT/data/standard/{col}_standard.csv'
         trainDataPath = f'../../data/test_ChatGPT/data/standard/{col}_standard_train.csv'
         testDataPath = f'../../data/test_ChatGPT/data/standard/{col}_standard_test.csv'
         for trainSize in trainSizes:
